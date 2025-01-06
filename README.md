@@ -149,29 +149,3 @@ processData()
   user.processData().then(console.log);
 ```
 **Q: What's the execution order of these three lines? Why?**
-
-## Expected Outputs:
-```javascript
-// Exercise 3
-Hello, I'm John
-
-// Exercise 4
-Hello, I'm John
-Hello, I'm John
-
-// Exercise 6
-JOHN
-JOHN
-JOHN
-
-// Exercise 7
-Name too short  // (if name length < 3)
-
-// Exercise 9
-JOHN!
-5
-
-// Exercise 10
-Hello, I'm John
-5
-```
