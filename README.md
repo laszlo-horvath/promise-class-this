@@ -1,4 +1,4 @@
-# 60-Minute Coding Exercise: Promises, Classes, and 'this'
+# 60-Minute Coding Exercise: Promises, Classes, and `this`
 
 ## Exercise 1: Create User Class
 ```javascript
