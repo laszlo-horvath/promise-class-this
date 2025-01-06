@@ -28,29 +28,6 @@ class User {
   }
 }
 ```
-**Q: What's the output? Why?**
-
-```javascript
-const user = new User('John');
-const greetFn = user.greet;
-greetFn();
-```
-
-*A: If you forget the new keyword:*
-- this inside the constructor points to the global object (or undefined in strict mode)
-- Properties get assigned to global scope instead of a new object
-- No object is returned automatically
-- TypeError if you try to access methods
-
-```javascript
-// With new - works
-const user1 = new User('John');  // User {name: 'John'}
-
-// Without new - breaks
-const user2 = User('John');      // undefined
-console.log(window.name);        // 'John' (properties leaked to global)
-user2.greet();                   // TypeError: Cannot read properties of undefined
-```
 
 ## Exercise 4: Arrow Function Method
 ```javascript
@@ -149,3 +126,29 @@ processData()
   user.processData().then(console.log);
 ```
 **Q: What's the execution order of these three lines? Why?**
+
+## Exercise 11: What's the output and why?
+
+**Q: What's the output? Why?**
+
+```javascript
+const user = new User('John');
+const greetFn = user.greet;
+greetFn();
+```
+
+*A: If you forget the new keyword:*
+- this inside the constructor points to the global object (or undefined in strict mode)
+- Properties get assigned to global scope instead of a new object
+- No object is returned automatically
+- TypeError if you try to access methods
+
+```javascript
+// With new - works
+const user1 = new User('John');  // User {name: 'John'}
+
+// Without new - breaks
+const user2 = User('John');      // undefined
+console.log(window.name);        // 'John' (properties leaked to global)
+user2.greet();                   // TypeError: Cannot read properties of undefined
+```
